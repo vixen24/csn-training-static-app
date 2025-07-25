@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Beautiful Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap">
+  <style>
+    :root {
+      --primary: #31326f;
+      --accent: #f7b801;
+      --bg: #f8f8fa;
+      --white: #fff;
+      --dark: #22223b;
+      --shadow: 0 8px 24px rgba(49,50,111,0.07);
+    }
+    * {margin:0; padding:0; box-sizing: border-box;}
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--primary);
+      color: var(--white);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    nav {
+      margin-top: 0.7rem;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .hero {
+      padding: 3rem 1rem 2rem 1rem;
+      text-align: center;
+      background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+      color: var(--white);
+      margin-bottom: 2.5rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      font-weight: 900;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.94;
+      font-weight: 400;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .featured-post {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: -3rem auto 2rem auto;
+      max-width: 700px;
+      position: relative;
+    }
+    .featured-post h2 {
+      color: var(--primary);
+      margin-bottom: .5rem;
+    }
+    .post-date {
+      font-size: .9rem;
+      color: #777;
+      margin-bottom: 1.2rem;
+    }
+    .featured-post p {
+      font-size: 1.1rem;
+    }
+    .blog-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem auto 3rem auto;
+      max-width: 1200px;
+    }
+    .blog-card {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-radius: .7rem;
+      width: 330px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s;
+    }
+    .blog-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 32px rgba(49,50,111,0.10);
+    }
+    .card-image {
+      width: 100%;
+      height: 168px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 1.2rem 1rem 1.2rem 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-title {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: .6rem;
+      font-weight: 700;
+    }
+    .blog-card-date {
+      font-size: .89rem;
+      color: #777;
+      margin-bottom: .7rem;
+    }
+    .blog-card-text {
+      flex: 1;
+      margin-bottom: .7rem;
+    }
+    .blog-card-read {
+      align-self: flex-end;
+      background: var(--primary);
+      color: var(--white);
+      padding: .45em 1.3em;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: .99rem;
+      transition: background 0.22s, color 0.22s;
+    }
+    .blog-card-read:hover {
+      background: var(--accent);
+      color: var(--primary);
+    }
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+    .social-icons {
+      margin-top: .7rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .social-icons a {
+      background: var(--accent);
+      color: var(--primary);
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: background 0.19s, color 0.19s;
+    }
+    .social-icons a:hover {
+      background: var(--white);
+      color: var(--accent);
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 2rem; }
+      .blog-list { flex-direction: column; align-items: center; }
+      .blog-card { width: 96vw; }
+      .featured-post { max-width: 98vw; }
+    }
+  </style>
+  <!-- Optionally load Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/4fa1f0c468.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div style="font-size:1.6rem;font-weight:900;letter-spacing:.5px">My Beautiful Blog</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Posts</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Welcome to My Blog!</h1>
+  <p>Create, learn, and share your journey. Explore articles, tips, and inspiration on web development, tech, and more.</p>
+</section>
+
+<section class="featured-post">
+  <h2>🌟 Getting Started with Static Sites</h2>
+  <div class="post-date">July 25, 2025</div>
+  <p>Discover how static site generators empower you to build fast, secure, and beautiful blogs like this one—no backend required! Static sites are blazing fast, low-maintenance, and perfect for modern web publishing.</p>
+</section>
+
+<main>
+  <div class="blog-list">
+    <div class="blog-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=700&q=80" alt="Sunrise" />
+      <div class="blog-card-content">
+        <div class="blog-card-title">Tips for Writing Engaging Content</div>
+        <div class="blog-card-date">July 20, 2025</div>
+        <div class="blog-card-text">Learn simple tricks for making your blog posts more engaging, readable, and enjoyable for your audience.</div>
+        <a href="post1.html" class="blog-card-read">Read More</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=700&q=80" alt="Coding workspace" />
+      <div class="blog-card-content">
+        <div class="blog-card-title">Why Learn HTML & CSS in 2025?</div>
+        <div class="blog-card-date">July 18, 2025</div>
+        <div class="blog-card-text">HTML and CSS form the backbone of the web. Here’s why they’re more critical than ever, and how to start mastering them now.</div>
+        <a href="#" class="blog-card-read">Read More</a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img class="card-image" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="Coffee and notes" />
+      <div class="blog-card-content">
+        <div class="blog-card-title">Static vs Dynamic Sites: Pros & Cons</div>
+        <div class="blog-card-date">July 12, 2025</div>
+        <div class="blog-card-text">Confused between static and dynamic websites? Let’s compare their strengths, weaknesses, and ideal use cases.</div>
+        <a href="#" class="blog-card-read">Read More</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div>© 2025 My Beautiful Blog</div>
+  <div class="social-icons">
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
